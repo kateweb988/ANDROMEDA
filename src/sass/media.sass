@@ -15,6 +15,10 @@
    .close-popup
       right: -3%
 @media screen and (max-width: 1199px)
+   .header__wrap 
+      display: none
+   .header__fig
+      display: block
    .sub 
       display: none !important
    .menu-btn 
@@ -127,8 +131,9 @@
    .load-more-container #load-more:checked ~ .load-more-btn .loaded
       right: -135px
       top: -81px
-   #map 
+   .map 
       width: 500px
+      object-fit: cover
    h2 
       font-size: 70px
    .about h2
@@ -270,7 +275,7 @@
       align-items: flex-start
    .contacts__box .sub
       left: -53px
-   #map
+   .map
       margin-top: 48px
       width: 100%
    .footer__box
@@ -604,12 +609,12 @@
    .contacts__colors 
       left: -300px
       top: -190px
-   .ymaps-2-1-79-image 
-      width: 74.68px !important
-      height: 92.95px !important
-      background-size: 100% !important
-      background-repeat: no-repeat !important
-   #map
+   // .ymaps-2-1-79-image 
+   //    width: 74.68px !important
+   //    height: 92.95px !important
+   //    background-size: 100% !important
+   //    background-repeat: no-repeat !important
+   .map
       height: 361px
       margin-top: 40px
    .footer 
@@ -782,7 +787,7 @@
    .contacts__name
       font-size: 20px
       margin-bottom: 11px
-   #map
+   .map
       height: 300px
    .close-popup2
       right: 29%

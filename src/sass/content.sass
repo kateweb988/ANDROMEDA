@@ -109,11 +109,61 @@
          &:hover 
             svg
                stroke: $vio
+@-webkit-keyframes pulsate 
+   0% 
+      -webkit-transform: scale(1, 1)
+      opacity: 1
+   50% 
+      -webkit-transform: scale(1.2, 1.2)
+      opacity: 0.5
+   100% 
+      -webkit-transform: scale(1, 1)
+      opacity: 1
 .header 
    background: url(/img/bg.svg) no-repeat center center / cover
    border-radius: 0px 0px 80px 80px
    margin: 0 18px
    overflow: hidden
+   .pulse-ring1
+      position: absolute
+      content: ''
+      width: 448px
+      height: 448px
+      border: 1px solid #5ED8FF
+      border-radius: 50%
+      bottom: -8px
+      right: 9px
+      animation: pulsate infinite linear 6s
+   .pulse-ring2
+      position: absolute
+      content: ''
+      width: 598px
+      height: 598px
+      border: 1px solid #5ED8FF
+      border-radius: 50%
+      bottom: -77px
+      right: -66px
+      animation: pulsate infinite linear 6s
+   .pulse-ring3
+      position: absolute
+      content: ''
+      width: 740px
+      height: 740px
+      border: 1px solid rgba(184, 74, 153, 0.6)
+      border-radius: 50%
+      bottom: -154px
+      right: -137px
+      animation: pulsate infinite linear 6s
+   .pulse-ring4
+      position: absolute
+      content: ''
+      width: 888px
+      height: 888px
+      border: 1px solid rgba(255, 255, 255, 0.4)
+      border-radius: 50%
+      bottom: -224px
+      right: -211px
+      animation: pulsate infinite linear 6s
    &__box 
       position: relative
       margin-top: 50px
@@ -127,6 +177,7 @@
       right: -220px
       bottom: -226px
       z-index: 1
+      display: none
    &__info 
       margin-top: 19px
       font-weight: 300
@@ -666,17 +717,19 @@ input:-moz-placeholder
       color: #FFFFFF
       &:hover 
          color: $vio
-[class*="ymaps-2"][class*="-ground-pane"] 
-   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
-   -webkit-filter: grayscale(100%)
+// [class*="ymaps-2"][class*="-ground-pane"] 
+//    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")
+//    -webkit-filter: grayscale(100%)
 .footer 
    padding: 10px 0 36px
    overflow: visible
+   &__info 
+      align-items: center
    &__box 
       justify-content: space-between
       align-items: center
    &__com 
-      margin-top: 21px
+      margin-top: 29px
       align-items: center
       justify-content: flex-end
       p 
@@ -684,9 +737,11 @@ input:-moz-placeholder
          font-size: 16px
          line-height: 15px
          color: #FFFFFF
+         font-weight: 300
       img 
          position: relative
          top: -10px
+         width: 76px
    &__link 
       font-weight: 400
       font-size: 16px
@@ -697,6 +752,8 @@ input:-moz-placeholder
       margin-right: 140px
       &:hover 
          text-decoration: none
+      br 
+         display: none
 .menu-btn, .menu
    display: none
 .mob 
@@ -804,7 +861,7 @@ input:-moz-placeholder
             filter: drop-shadow(0px 0px 74px rgba(149, 44, 255, 0.8))
          img
             width: 325px
-            height: max-content
+            height: auto
             border-radius: 40px
 .popup2
    width: 650px
@@ -871,12 +928,13 @@ input:-moz-placeholder
       &:last-child
          margin-bottom: 0
    &__name 
-      font-weight: 400
+      font-weight: 500
       font-size: 20px
       line-height: 110%
       margin-bottom: 14px
+      text-transform: inherit
    &__text 
-      font-weight: 400
+      font-weight: 300
       font-size: 16px
       line-height: 140%
 .blog 
@@ -898,13 +956,11 @@ input:-moz-placeholder
       padding: 24px 24px 32px
       flex-direction: column
       display: flex
+      box-shadow: 0px 0px 74px rgba(149, 44, 255, 0.8)
       min-height: 486px
-      &:nth-child(1)
-         box-shadow: 0px 0px 74px rgba(149, 44, 255, 0.8)
-      &:nth-child(2)
+      transition: box-shadow 0.3s
+      &:hover
          box-shadow: 0px 0px 74px rgba(254, 66, 167, 0.8)
-      &:nth-child(3)
-         box-shadow: 0px 0px 74px rgba(149, 44, 255, 0.8)
    &__pic 
       width: 100%
       height: 170px
@@ -918,7 +974,7 @@ input:-moz-placeholder
       margin-bottom: 24px
       width: 85%
    &__text 
-      font-weight: 400
+      font-weight: 300
       font-size: 16px
       line-height: 140%
       margin-bottom: 27px
@@ -960,6 +1016,7 @@ input:-moz-placeholder
       font-size: 16px
       line-height: 140%
       margin-bottom: 20px
+      font-weight: 300
       &:last-child
          margin-bottom: 0
 label.error
@@ -1017,7 +1074,7 @@ input[type="range"]
    width: 100%
    height: 14px
    background: #404040
-   border: none
+   border: none !important
    border-radius: 10px
    background-image: linear-gradient(#952CFF, #952CFF)
    background-size: 70% 100%
@@ -1036,7 +1093,7 @@ input[type="range"]::-moz-range-thumb
    height: 32px
    width: 32px
    border-radius: 50%
-   background: #ff4500
+   background: url(/img/range.svg) no-repeat
    cursor: ew-resize
    box-shadow: 0 0 2px 0 #555
    transition: background .3s ease-in-out
@@ -1049,12 +1106,6 @@ input[type="range"]::-ms-thumb
    cursor: ew-resize
    box-shadow: 0 0 2px 0 #555
    transition: background .3s ease-in-out
-input[type="range"]::-webkit-slider-thumb:hover 
-   background: #ff0200
-input[type="range"]::-moz-range-thumb:hover 
-   background: #ff0200
-input[type="range"]::-ms-thumb:hover 
-   background: #ff0200
 input[type=range]::-webkit-slider-runnable-track  
    -webkit-appearance: none
    box-shadow: none
@@ -1119,3 +1170,12 @@ input[type="range"]::-ms-track
       font-weight: 700
       font-size: 48px
       line-height: 110%
+.map
+   width: 670px
+   height: 407px
+   overflow: hidden
+   border-radius: 40px
+   img
+      width: 100%
+      height: 100%
+      object-fit: cover
