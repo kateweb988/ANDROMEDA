@@ -8,6 +8,7 @@
 		<meta name="format-detection" content="date=no">
 		<meta name="format-detection" content="address=no">
 		<meta name="format-detection" content="email=no">
+		<meta name="robots" content="noindex">
 		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default">
 	
@@ -25,6 +26,10 @@
 	
 	</head>
 <body>
+	 <!-- Прелоадер -->
+	 <div class="preloader">
+		<img src="/img/pre.svg" alt="" class="pre">
+	  </div>
 	<div class="body-wrap">
 		<header class="header" id="header">
 			<nav class="nav">
@@ -127,7 +132,7 @@
 			<div class="container">
 				<div class="header__box">
 					<img src="/img/girl.png" alt="" class="header__girl">
-					<img src="/img/rounds.svg" alt="" class="header__fig">
+					<!-- <img src="/img/rounds.svg" alt="" class="header__fig"> -->
 					<div class="header__content">
 						<h1>
 							ANDROMEDA
@@ -194,7 +199,7 @@
 						<div class="swiper mySwiper2">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide open-popup">
-									<img src="/img/4.jpg" loading="lazy" >
+									<img src="/img/3.jpg" loading="lazy" >
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 								</div>
 								<div class="swiper-slide open-popup">
@@ -202,7 +207,7 @@
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 								</div>
 								<div class="swiper-slide open-popup">
-									<img src="/img/3.jpg" loading="lazy" >
+									<img src="/img/5.jpg" loading="lazy" >
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 								</div>
 								<div class="swiper-slide open-popup">
@@ -219,7 +224,7 @@
 						<div thumbsSlider="" class="swiper mySwiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
-									<img src="/img/5.jpg" loading="lazy">
+									<img src="/img/3.jpg" loading="lazy">
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 								</div>
 								<div class="swiper-slide">
@@ -227,7 +232,7 @@
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 								</div>
 								<div class="swiper-slide">
-									<img src="/img/3.jpg" loading="lazy">
+									<img src="/img/5.jpg" loading="lazy">
 									<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 								</div>
 								<div class="swiper-slide">
@@ -345,7 +350,7 @@
 								Количество смен в неделю:
 							</p>
 							<div>
-								<input type="range" value="70" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
+								<input type="range" step="1" value="0" min="1" max="3" id="range" oninput="rangenumber.value=value"/>
 								<!-- <input type="number" id="rangenumber" min="0" max="100" value="70" oninput="range.value=value"> -->
 							</div>
 							<div class="calc__info d-flex">
@@ -365,7 +370,7 @@
 								Знание английского языка:
 							</p>
 							<div>
-								<input type="range" value="70" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
+								<input type="range" step="1" value="0" min="1" max="3" id="range" oninput="rangenumber.value=value"/>
 								<!-- <input type="number" id="rangenumber" min="0" max="100" value="70" oninput="range.value=value"> -->
 							</div>
 							<div class="calc__info d-flex">
@@ -385,7 +390,7 @@
 								Показать доход за:
 							</p>
 							<div>
-								<input type="range" value="70" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
+								<input type="range" step="1" value="0" min="1" max="3" id="range" oninput="rangenumber.value=value"/>
 								<!-- <input type="number" id="rangenumber" min="0" max="100" value="70" oninput="range.value=value"> -->
 							</div>
 							<div class="calc__info d-flex">
@@ -691,7 +696,7 @@
 				</a>
 			</div>
 		</footer>
-		<div class="popup__bg">
+		<div class="popup__bg" id="popup1">
 			<div class="popup">
 				<img src="/img/close.svg" alt="" class="close-popup">
 				<div class="popup__wrap">
@@ -699,22 +704,24 @@
 					<div class="swiper mySwiper3">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<img src="/img/4.jpg" loading="lazy">
+								<img src="/img/3.jpg" loading="lazy">
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 							</div>
 							<div class="swiper-slide">
 								<img src="/img/2.jpg" loading="lazy">
-							</div>
-							<div class="swiper-slide">
-								<img src="/img/3.jpg" loading="lazy">
-							</div>
-							<div class="swiper-slide">
-								<img src="/img/1.jpg" loading="lazy">
-							</div>
-							<div class="swiper-slide">
-								<img src="/img/6.jpg" loading="lazy">
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 							</div>
 							<div class="swiper-slide">
 								<img src="/img/5.jpg" loading="lazy">
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="/img/1.jpg" loading="lazy">
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+							<div class="swiper-slide">
+								<img src="/img/66.jpg" loading="lazy">
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 							</div>
 						</div>
 						<div class="swiper-pagination"></div>
@@ -729,7 +736,7 @@
 				</div>
 			</div>
 		</div> 
-		<div class="popup__bg2">
+		<div class="popup__bg2" id="popup2">
 			<div class="popup2">
 				<img src="/img/close.svg" alt="" class="close-popup2">
 				<div class="popup__wrap">
@@ -764,7 +771,7 @@
 				</div>
 			</div>
 		</div> 
-		<div class="popup__bg3">
+		<div class="popup__bg3" id="popup3">
 			<div class="popup3">
 				<img src="/img/close.svg" alt="" class="close-popup3">
 				<div class="popup__wrap">
@@ -790,26 +797,7 @@
 				</div>
 			</div>
 		</div>
-		<div style="display:none;">
-			<div class="box-modal" id="popup-thank">
-				<div class="popup">
-					<div class="popup-call__box popup-call__box_item">
-						<div class="box-modal__close articmodal-close">
-							<img src="img/close.svg" alt="" class="close__pic svg">
-						</div>
-						<p class="thank__name">
-							Спасибо!
-						</p>
-						<p class="thank__text">
-							Наш менеджер свяжется с Вами
-							в ближайшее время.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
-	
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<!-- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> -->
 	<!-- <script type="text/javascript">
@@ -852,10 +840,10 @@
 		myMap.behaviors.disable('scrollZoom');
 	}
 	</script>    -->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script> -->
 	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
-	<script type="text/javascript"
-		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script> 
+	<!-- <script type="text/javascript"
+		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>  -->
 	<script src="js/all.js"></script>
 </body>
 

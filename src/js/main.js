@@ -106,23 +106,23 @@ document.addEventListener("DOMContentLoaded", () => {
  });
   
 });
-document.addEventListener("DOMContentLoaded", () => {
-  $(window).bind('scroll',function(e){
-    parallaxScroll();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   $(window).bind('scroll',function(e){
+//     parallaxScroll();
+// });
 
-/* Scroll the background layers */
+// /* Scroll the background layers */
 
-function parallaxScroll(){
-    var scrolled = $(window).scrollTop();
-    $('#about .sub').css('top',(-250+(scrolled*0.48))+'px');
-    $('#van .sub').css('top',(-600+(scrolled*0.48))+'px');
-    $('#order .sub').css('top',(-1600+(scrolled*0.5))+'px');
-    $('#faq .sub').css('top',(-1900+(scrolled*0.44))+'px');
-    $('#rev .sub').css('top',(-1600+(scrolled*0.3))+'px');
-    $('#calc .sub').css('top',(-1200+(scrolled*0.48))+'px');
-  };
-});
+// function parallaxScroll(){
+//     var scrolled = $(window).scrollTop();
+//     $('#about .sub').css('top',(-250+(scrolled*0.48))+'px');
+//     $('#van .sub').css('top',(-600+(scrolled*0.48))+'px');
+//     $('#order .sub').css('top',(-1600+(scrolled*0.5))+'px');
+//     $('#faq .sub').css('top',(-1900+(scrolled*0.44))+'px');
+//     $('#rev .sub').css('top',(-1600+(scrolled*0.3))+'px');
+//     $('#calc .sub').css('top',(-1200+(scrolled*0.48))+'px');
+//   };
+// });
 document.addEventListener("DOMContentLoaded", () => {
   var swiper = new Swiper(".mySwiper", {
     spaceBetween: 26,
@@ -256,6 +256,13 @@ document.addEventListener('click', (e) => {
         popup3.classList.remove('active');
     }
 });
+document.addEventListener('keydown', function(e) {
+   if (e.key === 'Escape') {
+   //ваша функция закрытия окна
+     popupBg3.classList.remove('active');
+     popup3.classList.remove('active');
+   }
+   });
 });
 document.addEventListener("DOMContentLoaded", () => {
    //popup
@@ -283,6 +290,13 @@ document.addEventListener("DOMContentLoaded", () => {
           popup.classList.remove('active');
       }
   });
+  document.addEventListener('keydown', function(e) {
+   if (e.key === 'Escape') {
+   //ваша функция закрытия окна
+     popupBg.classList.remove('active');
+     popup.classList.remove('active');
+   }
+   });
   let popupBg2 = document.querySelector('.popup__bg2');
 let popup2 = document.querySelector('.popup2');
 let openPopupButtons2 = document.querySelectorAll('.open-popup2');
@@ -295,6 +309,13 @@ openPopupButtons2.forEach((button) => {
         popup2.classList.add('active');
     })
 });
+document.addEventListener('keydown', function(e) {
+   if (e.key === 'Escape') {
+   //ваша функция закрытия окна
+     popupBg2.classList.remove('active');
+     popup2.classList.remove('active');
+   }
+   });
 
 closePopupButton2.addEventListener('click',() => {
     popupBg2.classList.remove('active');
@@ -307,4 +328,14 @@ document.addEventListener('click', (e) => {
         popup2.classList.remove('active');
     }
 });
+
+});
+document.addEventListener("DOMContentLoaded", () => {
+   window.onload = function () {
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function () {
+       document.body.classList.add('loaded');
+       document.body.classList.remove('loaded_hiding');
+      }, 500);
+    }
 });
