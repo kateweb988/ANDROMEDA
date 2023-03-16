@@ -24,10 +24,14 @@
 	
 	</head>
 <body>
-	 <!-- Прелоадер -->
-	<div class="preloader">
-		<img src="/img/pre.svg" alt="" class="pre">
-	</div>
+	<div class="preloader"></div>
+	<script>
+		setTimeout(function () {
+  document.querySelector(".preloader").style.display = "none";
+  document.querySelector(".body-wrap").style.display = "flex";
+}, 1000);
+
+	</script>
 	<div class="body-wrap">
 		<header class="header header-page" id="header">
 			<nav class="nav">
@@ -385,9 +389,6 @@
 			</div>
 		</div> 
 	</div>
-	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
-	<script type="text/javascript"
-		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script> 
 	<script src="js/all.js"></script>
 </body>
 

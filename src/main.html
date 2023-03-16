@@ -26,10 +26,14 @@
 	
 	</head>
 <body>
-	 <!-- Прелоадер -->
-	 <div class="preloader">
-		<img src="/img/pre.svg" alt="" class="pre">
-	  </div>
+	<div class="preloader"></div>
+	<script>
+		setTimeout(function () {
+  document.querySelector(".preloader").style.display = "none";
+  document.querySelector(".body-wrap").style.display = "flex";
+}, 1000);
+
+	</script>
 	<div class="body-wrap">
 		<header class="header" id="header">
 			<nav class="nav">
@@ -161,10 +165,10 @@
 						</div>
 					</div>
 					<div class="header__wrap">
-						<div class="pulse-ring1"></div>
-						<div class="pulse-ring2"></div>
-						<div class="pulse-ring3"></div>
-						<div class="pulse-ring4"></div>
+						<div class="pulse-ring1 pulse"></div>
+						<div class="pulse-ring2 pulse"></div>
+						<div class="pulse-ring3 pulse"></div>
+						<div class="pulse-ring4 pulse"></div>
 					</div>
 				</div>
 			</div>
@@ -797,53 +801,71 @@
 				</div>
 			</div>
 		</div>
-	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-	<!-- <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> -->
-	<!-- <script type="text/javascript">
-	ymaps.ready(init);
-	
-	function init () {
-		var myMap = new ymaps.Map("map", {
-			// Центр карты, указываем коордианты
-			center:[59.931017, 30.361476],
-			// Масштаб, тут все просто
-			zoom: 14,
-			// Отключаем все элементы управления
-			controls: []
-		}); 
-				
-		var myGeoObjects = [];
-		
-		// Наша метка, указываем коордианты
-		myGeoObjects = new ymaps.Placemark([59.9310010, 30.361976],{
-						balloonContentBody: 'ANDROMEDA ',
-						},{
-						iconLayout: 'default#image',
-						// Путь до нашей картинки
-						iconImageHref: '/img/icon.png', 
-						// Размер по ширине и высоте
-						iconImageSize: [94, 117],
-						// Смещение левого верхнего угла иконки относительно
-						// её «ножки» (точки привязки).
-						iconImageOffset: [-60, -130]
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+		  spaceBetween: 26,
+		  slidesPerView: 5,
+		  lazy: true,
+		  freeMode: true,
+		  watchSlidesProgress: true,
 		});
-					
-		var clusterer = new ymaps.Clusterer({
-			clusterDisableClickZoom: false,
-			clusterOpenBalloonOnClick: false,
+		var swiper2 = new Swiper(".mySwiper2", {
+		  spaceBetween: 10,
+		  lazy: true,
+		  navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		  },
+		  thumbs: {
+			swiper: swiper,
+		  },
+		  breakpoints: {
+			// when window width is >= 320px
+			320: {
+			  pagination: {
+				el: ".swiper-pagination",
+				clickable: true
+			  }
+			},
+			// when window width is >= 480px
+			480: {
+			  pagination: {
+				el: ".swiper-pagination",
+				clickable: true
+			  }
+			},
+			// when window width is >= 640px
+			640: {
+			  pagination: {
+				el: ".swiper-pagination",
+				clickable: true
+			  }
+			}
+		  }
 		});
-		
-		clusterer.add(myGeoObjects);
-		myMap.geoObjects.add(clusterer);
-		// Отлючаем возможность изменения масштаба
-		myMap.behaviors.disable('scrollZoom');
-	}
-	</script>    -->
-	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script> -->
-	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
-	<!-- <script type="text/javascript"
-		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>  -->
+		var swiper = new Swiper(".mySwiper3", {
+		  lazy: true,
+		  pagination: {
+		  el: ".swiper-pagination",
+		  type: "fraction",
+		  },
+		  navigation: {
+		  nextEl: ".swiper-button-next",
+		  prevEl: ".swiper-button-prev",
+		  },
+		});
+		var swiper5 = new Swiper(".mySwiper5", {
+		  lazy: true,
+		  pagination: {
+		  el: ".swiper-pagination",
+		  },
+		  navigation: {
+		  nextEl: ".swiper-button-next",
+		  prevEl: ".swiper-button-prev",
+		  },
+		});
+	</script>
 	<script src="js/all.js"></script>
 </body>
 

@@ -24,10 +24,14 @@
 	
 	</head>
 <body>
-	 <!-- Прелоадер -->
-	 <div class="preloader">
-		<img src="/img/pre.svg" alt="" class="pre">
-	</div>
+	<div class="preloader"></div>
+	<script>
+		setTimeout(function () {
+  document.querySelector(".preloader").style.display = "none";
+  document.querySelector(".body-wrap").style.display = "flex";
+}, 1000);
+
+	</script>
 	<div class="body-wrap">
 		<header class="header header-page" id="header">
 			<nav class="nav">
@@ -151,7 +155,7 @@
 								Количество смен в неделю:
 							</p>
 							<div>
-								<input type="range" value="70" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
+								<input type="range" step="1" value="0" min="1" max="3" id="range" oninput="rangenumber.value=value"/>
 								<!-- <input type="number" id="rangenumber" min="0" max="100" value="70" oninput="range.value=value"> -->
 							</div>
 							<div class="calc__info d-flex">
@@ -171,7 +175,7 @@
 								Знание английского языка:
 							</p>
 							<div>
-								<input type="range" value="70" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
+								<input type="range" step="1" value="0" min="1" max="3" id="range" oninput="rangenumber.value=value"/>
 								<!-- <input type="number" id="rangenumber" min="0" max="100" value="70" oninput="range.value=value"> -->
 							</div>
 							<div class="calc__info d-flex">
@@ -191,7 +195,7 @@
 								Показать доход за:
 							</p>
 							<div>
-								<input type="range" value="70" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
+								<input type="range" step="1" value="0" min="1" max="3" id="range" oninput="rangenumber.value=value"/>
 								<!-- <input type="number" id="rangenumber" min="0" max="100" value="70" oninput="range.value=value"> -->
 							</div>
 							<div class="calc__info d-flex">
@@ -486,7 +490,70 @@
 			</div>
 		</div> 
 	</div>
-	 
+	 <script>
+   var swiper = new Swiper(".mySwiper", {
+     spaceBetween: 26,
+     slidesPerView: 5,
+     lazy: true,
+     freeMode: true,
+     watchSlidesProgress: true,
+   });
+   var swiper2 = new Swiper(".mySwiper2", {
+     spaceBetween: 10,
+     lazy: true,
+     navigation: {
+       nextEl: ".swiper-button-next",
+       prevEl: ".swiper-button-prev",
+     },
+     thumbs: {
+       swiper: swiper,
+     },
+     breakpoints: {
+       // when window width is >= 320px
+       320: {
+         pagination: {
+           el: ".swiper-pagination",
+           clickable: true
+         }
+       },
+       // when window width is >= 480px
+       480: {
+         pagination: {
+           el: ".swiper-pagination",
+           clickable: true
+         }
+       },
+       // when window width is >= 640px
+       640: {
+         pagination: {
+           el: ".swiper-pagination",
+           clickable: true
+         }
+       }
+     }
+   });
+   var swiper = new Swiper(".mySwiper3", {
+     lazy: true,
+     pagination: {
+     el: ".swiper-pagination",
+     type: "fraction",
+     },
+     navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+     },
+   });
+   var swiper5 = new Swiper(".mySwiper5", {
+     lazy: true,
+     pagination: {
+     el: ".swiper-pagination",
+     },
+     navigation: {
+     nextEl: ".swiper-button-next",
+     prevEl: ".swiper-button-prev",
+     },
+   });
+	 </script>
 	<script src="js/all.js"></script>
 </body>
 

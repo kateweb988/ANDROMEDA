@@ -13,7 +13,11 @@
    .swiper-button-prev, .swiper-rtl .swiper-button-next
       left: -6%
    .close-popup
-      right: -3%
+      right: -5%
+   .popup .swiper-button-next, .popup .swiper-rtl .swiper-button-prev 
+      right: -6%
+   .popup .swiper-button-prev, .popup .swiper-rtl .swiper-button-next
+      left: -6%
 @media screen and (max-width: 1199px)
    .bread
       top: -50px
@@ -341,6 +345,12 @@
       margin-top: 58px
    .calc 
       padding: 100px 0
+   input, textarea, select
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+   input 
+      border-radius: 0 !important
 @media screen and (max-width: 767px)
    h1 
       font-size: 58px
@@ -460,7 +470,7 @@
       -moz-appearance: none
       appearance: none
    input 
-      border-radius: 0
+      border-radius: 0 !important
    button:active, button:focus 
       outline: none
    button::-moz-focus-inner 

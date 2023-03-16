@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
    const rangeInputs = document.querySelectorAll('input[type="range"]')
 const numberInput = document.querySelector('input[type="number"]')
@@ -123,70 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
 //     $('#calc .sub').css('top',(-1200+(scrolled*0.48))+'px');
 //   };
 // });
-document.addEventListener("DOMContentLoaded", () => {
-  var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 26,
-    slidesPerView: 5,
-    lazy: true,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-  var swiper2 = new Swiper(".mySwiper2", {
-    spaceBetween: 10,
-    lazy: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        }
-      },
-      // when window width is >= 480px
-      480: {
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        }
-      },
-      // when window width is >= 640px
-      640: {
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        }
-      }
-    }
-  });
-  var swiper = new Swiper(".mySwiper3", {
-    lazy: true,
-    pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-    },
-    navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-    },
-  });
-  var swiper5 = new Swiper(".mySwiper5", {
-    lazy: true,
-    pagination: {
-    el: ".swiper-pagination",
-    },
-    navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-    },
-  });
-});
 document.addEventListener("DOMContentLoaded", () => {
   var accordeonButtons = document.getElementsByClassName("accordeon__button");
 
@@ -329,13 +266,4 @@ document.addEventListener('click', (e) => {
     }
 });
 
-});
-document.addEventListener("DOMContentLoaded", () => {
-   window.onload = function () {
-      document.body.classList.add('loaded_hiding');
-      window.setTimeout(function () {
-       document.body.classList.add('loaded');
-       document.body.classList.remove('loaded_hiding');
-      }, 500);
-    }
 });

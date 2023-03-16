@@ -23,10 +23,14 @@
 	
 	</head>
 <body>
-	 <!-- Прелоадер -->
-	 <div class="preloader">
-		<img src="/img/pre.svg" alt="" class="pre">
-	</div>
+	<div class="preloader"></div>
+	<script>
+		setTimeout(function () {
+  document.querySelector(".preloader").style.display = "none";
+  document.querySelector(".body-wrap").style.display = "flex";
+}, 1000);
+
+	</script>
 	<div class="body-wrap">
 		<header class="header header-page" id="header">
 			<nav class="nav">
