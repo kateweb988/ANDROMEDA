@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-	
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="format-detection" content="date=no">
-		<meta name="format-detection" content="address=no">
-		<meta name="format-detection" content="email=no">
-		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="default">
-	
-		<title>ANDROMEDA</title>
-		<meta name="keywords" content="">
-		<meta name="description" content="">
-	
-		<meta property="og:locale" content="ru-Ru">
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="">
-		<meta property="og:description" content="">
 
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-	
-	</head>
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+	<title>ANDROMEDA</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<meta property="og:locale" content="ru-Ru">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
 <body>
 	<div class="preloader"></div>
 	<script>
 		setTimeout(function () {
-  document.querySelector(".preloader").style.display = "none";
-  document.querySelector(".body-wrap").style.display = "flex";
-}, 1000);
+			document.querySelector(".preloader").style.display = "none";
+			document.querySelector(".body-wrap").style.display = "flex";
+		}, 1000);
 
 	</script>
 	<div class="body-wrap">
@@ -38,7 +40,7 @@
 				<div class="container">
 					<div class="nav__box d-flex">
 						<a href="main.html" class="nav__logo">
-							<img src="/img/logo.svg" alt="">
+							<img src="img/logo.svg" alt="">
 						</a>
 						<ul class="nav__list">
 							<li class="nav__item">
@@ -69,10 +71,14 @@
 						</ul>
 						<div class="nav__info d-flex">
 							<a href="#" class="nav__social" target="blank">
-								<svg class="icon"><use xlink:href="/img/svg-sprite.svg#soc1"></use></svg> 
+								<svg class="icon">
+									<use xlink:href="img/svg-sprite.svg#soc1"></use>
+								</svg>
 							</a>
 							<a href="#" class="nav__social" target="blank">
-								<svg class="icon"><use xlink:href="/img/svg-sprite.svg#soc2"></use></svg> 
+								<svg class="icon">
+									<use xlink:href="img/svg-sprite.svg#soc2"></use>
+								</svg>
 							</a>
 							<a href="tel:+79812073041" class="nav__tel">
 								+7 (981) 207-30-41
@@ -84,9 +90,9 @@
 							<span></span>
 						</div>
 						<div class="menu">
-							<img src="/img/footer-logo.svg" alt="">
+							<img src="img/footer-logo.svg" alt="">
 							<nav>
-							   <ul>
+								<ul>
 									<li class="burger__item ">
 										<a href="main.html" class="burger__link">
 											Главная
@@ -112,15 +118,19 @@
 											Контакты
 										</a>
 									</li>
-							   </ul>
+								</ul>
 							</nav>
 							<div class="nav__info">
 								<div class="burger__flex d-flex">
 									<a href="#" class="nav__social" target="blank">
-										<svg class="icon"><use xlink:href="/img/svg-sprite.svg#soc1"></use></svg> 
+										<svg class="icon">
+											<use xlink:href="img/svg-sprite.svg#soc1"></use>
+										</svg>
 									</a>
 									<a href="#" class="nav__social" target="blank">
-										<svg class="icon"><use xlink:href="/img/svg-sprite.svg#soc2"></use></svg> 
+										<svg class="icon">
+											<use xlink:href="img/svg-sprite.svg#soc2"></use>
+										</svg>
 									</a>
 								</div>
 								<a href="tel:+79812073041" class="nav__tel">
@@ -151,7 +161,7 @@
 					</h2>
 					<div class="blog__flex d-flex">
 						<div class="blog__item">
-							<img src="/img/blog1.png" alt="" class="blog__pic">
+							<img src="img/blog1.png" alt="" class="blog__pic">
 							<p class="blog__name">
 								Есть ли обязанности у вебкам модели?
 							</p>
@@ -163,7 +173,7 @@
 							</a>
 						</div>
 						<div class="blog__item">
-							<img src="/img/blog2.png" alt="" class="blog__pic">
+							<img src="img/blog2.png" alt="" class="blog__pic">
 							<p class="blog__name">
 								Открыты новые вакансии
 							</p>
@@ -175,9 +185,9 @@
 							</a>
 						</div>
 						<div class="blog__item">
-							<img src="/img/blog3.png" alt="" class="blog__pic">
+							<img src="img/blog3.png" alt="" class="blog__pic">
 							<p class="blog__name">
-								Основные ошибки начинающих моделей 
+								Основные ошибки начинающих моделей
 							</p>
 							<p class="blog__text">
 								A lorem quisque est sed. Interdum elementum egestas quam egestas lacus bibendum egestas eget.
@@ -200,26 +210,29 @@
 						Оставь заявку — <br> начни зарабатывать
 					</h2>
 					<div class="order__wrap d-flex">
-						<form action="/success.php" class="order__form js-form"  id="popupResult" method="post">
+						<form action="/success.php" class="order__form js-form" id="popupResult" method="post">
 							<div class="order__item">
 								<label for="name">Как тебя зовут?</label>
-								<input type="text" name="name" required="" placeholder="Мария Иванова" class="order__input form__field">
+								<input type="text" name="name" required="" placeholder="Мария Иванова"
+									class="order__input form__field">
 							</div>
 							<div class="order__item">
 								<label for="tel">Твой телефон:</label>
-								<input type="tel" name="tel" required="" placeholder="+7 (999) 457-21-84" class="order__input form__field">
+								<input type="tel" name="tel" required="" placeholder="+7 (999) 457-21-84"
+									class="order__input form__field">
 							</div>
 							<button class="order__btn btn btn_1" data-submit>
 								ОТПРАВИТЬ ЗАЯВКУ
 							</button>
 							<p class="order__info">
-								Нажимая на кнопку “Отправить заявку” вы соглашаетесь с условиями <a href="#" target="blank"> политики конфиденциальности</a>
+								Нажимая на кнопку “Отправить заявку” вы соглашаетесь с условиями <a href="#" target="blank">
+									политики конфиденциальности</a>
 							</p>
 						</form>
 						<div class="order__right">
 							<div class="order__block"></div>
-							<img src="/img/girl2.png" alt="" class="order__girl">
-							<img src="/img/color1.svg" alt="" class="order__colors">
+							<img src="img/girl2.png" alt="" class="order__girl">
+							<img src="img/color1.svg" alt="" class="order__colors">
 						</div>
 					</div>
 				</div>
@@ -228,7 +241,7 @@
 		<section class="contacts" id="contacts-page">
 			<div class="container">
 				<div class="contacts__box">
-					<img src="/img/colors2.svg" alt="" class="contacts__colors">
+					<img src="img/colors2.svg" alt="" class="contacts__colors">
 					<p class="sub">
 						ВСЕГДА НА СВЯЗИ
 					</p>
@@ -267,7 +280,7 @@
 								</p>
 								<p class="contacts__text">
 									Санкт-Петербург, <br>
-									Площадь Александра Невского, 
+									Площадь Александра Невского,
 									Площадь Восстания
 								</p>
 							</div>
@@ -281,7 +294,7 @@
 							</div>
 						</div>
 						<a href="https://yandex.ru/maps/-/CCUOaAE5~D " class="map" target="blank">
-							<img src="/img/map.png" alt="">
+							<img src="img/map.png" alt="">
 						</a>
 					</div>
 				</div>
@@ -291,7 +304,7 @@
 			<div class="container">
 				<div class="footer__box d-flex">
 					<a href="main.html" class="nav__logo">
-						<img src="/img/logo.svg" alt="">
+						<img src="img/logo.svg" alt="">
 					</a>
 					<div class="footer__info d-flex">
 						<a href="#" class="footer__link">
@@ -299,10 +312,14 @@
 						</a>
 						<div class="nav__info d-flex">
 							<a href="#" class="nav__social" target="blank">
-								<svg class="icon"><use xlink:href="/img/svg-sprite.svg#soc1"></use></svg> 
+								<svg class="icon">
+									<use xlink:href="img/svg-sprite.svg#soc1"></use>
+								</svg>
 							</a>
 							<a href="#" class="nav__social nav__social_2" target="blank">
-								<svg class="icon"><use xlink:href="/img/svg-sprite.svg#soc2"></use></svg> 
+								<svg class="icon">
+									<use xlink:href="img/svg-sprite.svg#soc2"></use>
+								</svg>
 							</a>
 							<a href="tel:+79812073041" class="nav__tel">
 								+7 (981) 207-30-41
@@ -314,80 +331,80 @@
 					<p>
 						Сделано в:
 					</p>
-					<img src="/img/boroda.svg" alt="">
+					<img src="img/boroda.svg" alt="">
 				</a>
 			</div>
 		</footer>
 		<div class="popup__bg">
 			<div class="popup">
-				<img src="/img/close.svg" alt="" class="close-popup">
+				<img src="img/close.svg" alt="" class="close-popup">
 				<div class="popup__wrap">
 					<!-- Swiper -->
 					<div class="swiper mySwiper3">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<img src="/img/1.jpg"/>
+								<img src="img/1.jpg" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/img/2.jpg"/>
+								<img src="img/2.jpg" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/img/3.jpg"/>
+								<img src="img/3.jpg" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/img/4.jpg"/>
+								<img src="img/4.jpg" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/img/5.jpg"/>
+								<img src="img/5.jpg" />
 							</div>
 						</div>
 						<div class="swiper-pagination"></div>
 					</div>
 					<div class="swiper-button-next">
-						<img src="/img/right.svg" alt="">
+						<img src="img/right.svg" alt="">
 					</div>
 					<div class="swiper-button-prev">
-						<img src="/img/left.svg" alt="">
+						<img src="img/left.svg" alt="">
 					</div>
 
 				</div>
 			</div>
-		</div> 
+		</div>
 		<div class="popup__bg2">
 			<div class="popup2">
-				<img src="/img/close.svg" alt="" class="close-popup2">
+				<img src="img/close.svg" alt="" class="close-popup2">
 				<div class="popup__wrap">
 					<!-- Swiper -->
 					<div class="swiper mySwiper5">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<img src="/img/revi5.jpg"/>
+								<img src="img/revi5.jpg" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/img/revi2.jpg"/>
+								<img src="img/revi2.jpg" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/img/revi1.jpg"/>
+								<img src="img/revi1.jpg" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/img/revi4.jpg"/>
+								<img src="img/revi4.jpg" />
 							</div>
 							<div class="swiper-slide">
-								<img src="/img/revi3.jpg"/>
+								<img src="img/revi3.jpg" />
 							</div>
 						</div>
 						<div class="swiper-pagination"></div>
 					</div>
 					<div class="swiper-button-next">
-						<img src="/img/right.svg" alt="">
+						<img src="img/right.svg" alt="">
 					</div>
 					<div class="swiper-button-prev">
-						<img src="/img/left.svg" alt="">
+						<img src="img/left.svg" alt="">
 					</div>
 
 				</div>
 			</div>
-		</div> 
+		</div>
 	</div>
 	<script src="js/all.js"></script>
 </body>
